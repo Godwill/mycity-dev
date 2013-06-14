@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  line-height: 1em;
+  font-weight: normal;
+  text-shadow: 0 1px 0 #fff;
+  margin-bottom:8px;
+  margin-top:3px;
+}
+
+h1 {
+  font-size: 28px;
+  text-transform:capitalize;
+}
+
+
+#logo {
+	width:220px;
+	height:80px;
+	float:left;
+	margin:3px;
+	padding-top:10px;
+	color:#339;
+}
+	
+#logo h1{
+	color:#339;
+	font-family: 'Tangerine', serif;	
+	padding-top:15px;
+	font-size:54px;
+}
+
+.main-content{
+  width:720px;
+  float: left;
+
+}
+
+
+.main-content1{
+  width: 600px;
+  float:left;
+}
+
+.row {
+  width:100%;
+  float:left;
+  margin-bottom: 5px; 
+  
+}
+
+#news{
+	width:100%;
+	height:500px;
+	float:left;
+}
+
+#top-stories{
+	width:100%;
+	height:200px;
+	float:left;
+	margin-top:2px;
+	background-color:#000;	
+}
+
+#pictures{
+	width:370px;
+	height:500px;
+	float:left;
+	margin-right:2px;
+}
+
+article{
+	width:100%;
+	height:auto;
+	float:left;
+	margin-top:10px;
+	border-bottom:1px dashed #999;
+	padding-bottom:5px;
+}
+
+
+.category {
+	color: #666;
+	float: left;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+
+#leftSidebar {
+	width:120px;
+	height:auto;
+	float:left;
+}
+
+#BrowseRightSidebar {
+	width:250px;
+	height:auto;
+	float:left;
+}
+
+#mainContent1 {
+	width:650px;
+	height:auto;
+	float:left;
+}
+
+
+.articleShare {
+	width:100px;
+	float:left;
+	margin:2px;
+	padding-top:10px;
+}
+
+#share {
+	width:700px;
+	float:left;
+	margin:5px;
+}
+.numbers{
+  margin:0px auto;
+  
+}
+
+
+
+
+/*Ad Spaces*/
+.ad1 {
+	width:730px;
+	height:95px;
+	float:left;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.ad2 {
+	width:300px;
+	height:305px;
+	float:left;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.share-icon{
+  float: left;
+  width: 40px;
+}
+
+
+.article-body{
+  width:695px;
+  float: left;
+  border-right:1px solid #ccc;
+  padding-right: 20px;
+}
+
+.article-header{
+  width: 100%;
+  float:left;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.about-author{
+  width:670px;
+  height: 100px;
+  float: left;
+}
+
+.articlePic{width: 100%; height:300px; float: left;}
+.articlePic img {width:680px;height:300px;}
+
+.news-links{
+  width:700px;
+  height: 80px;
+  float: left; 
+}
+
+.news-social{
+  width:400px;
+  height: 80px;
+  float: right; 
+  background-color: red;
+}
+
+.featuredFront{
+  width: 97%;
+  float: left;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 10px;
+}
+
+.featuredPicFront{
+  width:70px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+}
+
+.fb-comments{width: 100%;}
+
+
+@media only screen and (min-device-width : 720px) {
+	.mobile-nav {display: none;}
+	.mobile-ad {display: none;}
+
+}
+
+
+
+@media only screen and (max-device-width: 480px), only screen and (max-device-width: 480px) {
+
+  #page{ width: 100%;}
+
+  #header{width: 100%;float: left;height:auto;}
+  navigation{display: none;}
+
+  #ad1{display: none;}
+  .ad1{display: none;}
+  .mobile-ad{width: 320px;float:left;height:50px;}
+
+  #logo{width:70px;height: 20px;float: left; font-size: 12px;padding:2px;}
+  #logo h2 {font-size: 12px;}
+  .sidebar{display: none;}
+
+  .featured{width: 100%;float: left;height: auto;}
+
+  .featuredPic{width: 50px;float: left;height: 50px;}
+
+  .featuredPic img{width: 50px;height: 50px;float:left;margin: 2px;}
+
+  .main-content{width: 100%;}
+
+  footer{width: 100%;float: left;}
+
+  .fb-comments{width: 100%; float: left;}
+
+  /*Magazine Articles*/
+
+.article-body{width: 98%; float: left;background-color: white; padding: 2px;}
+
+.about-author{width: 100%; float: left;}
+#article-social{display: none;}
+
+.articlePic{width: 300px; height:200px; float: left;}
+.articlePic img {width:350px;height:200px;}
+
+.article-header{width: 100%;float: left;}
+
+.small{width:100%;float: left;}
+
+.mobile-ad{width: 100%;height: 55px;float: left;}
+
+.mobile-nav {width: 100%;float:left;height:40px;background-color: }
+.mobile-nav ul {margin: 0px;padding: 0px;}
+.mobile-nav ul li {width:23%;float: left;text-align:center; border-right:1px solid black;margin:0px;}
+.mobile-nav ul li:last-child{width: 25%;float: left; border-right: 0px;}
+
+}
+
+/*Desktops and laptops*/
+

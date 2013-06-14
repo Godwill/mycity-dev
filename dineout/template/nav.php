@@ -1,0 +1,1 @@
+<div class="countries"><a href="<?php echo PATH ?>botswana/">Botswana</a> | <a href="<?php echo PATH ?>namibia/">Namibia</a> | <a href="<?php echo PATH ?>zambia/">Zambia</a> | <a href="<?php echo PATH ?>zimbabwe/">Zimbabwe</a></div>
