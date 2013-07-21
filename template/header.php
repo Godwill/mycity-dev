@@ -103,6 +103,14 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <!-- MixItUp Grid Initialisation-->
+    <script type="text/javascript">
+        $(function(){
+
+            $('#Grid').mixitup();
+
+        });
+    </script>
 
   <header>
 

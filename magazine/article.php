@@ -14,9 +14,9 @@
   foreach($article as $article):
    
 ?>
-<!DOCTYPE>
-<html>
-
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
     <meta charset="utf-8" />
     <meta name="description" content="<?php echo substr($article->body,0, 200); ?>" />
     <meta name="keywords" content="<?php echo $article->tags; ?>"
@@ -73,6 +73,7 @@
 </script>
     
 </head>
+
 <body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
