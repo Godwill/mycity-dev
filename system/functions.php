@@ -171,10 +171,11 @@ function get_for_stream($object_id, $table){
 	$sql = "SELECT * FROM ".$table." WHERE id=".$object_id;
 	$result_set = $database->query($sql);
 	$result = $database->fetch_array($result_set);
+
 if($table == 'articles'){
 	  echo '<div class="featured">';
 	  if(!empty($result['picture'])){
-		echo '<div class="featuredPic"><img src="images/magazine/thumb/'.$result['picture'].'" width="70" height="70"></div>';
+		echo '<div class="featuredPic"><img src="images/magazine/thumb/'.$result['picture'].'" width="70px" height="70px"></div>';
 	}
 	echo '<h3><a href="magazine/'.date('Y', $result['created']).'/'.date('m', $result['created']).'/'.date('d', $result['created']).'/'.$result['system'].'">' .$result['title']. '</a></h3>';
 		  	echo '<p>'.substr($result['body'],0, 190).'....</p>';

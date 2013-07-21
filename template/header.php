@@ -134,6 +134,11 @@
                        <span class="icon-bar"></span>
                        <span class="icon-bar"></span>
                    </button>
+
+                   <div class="top"> <!--TODO:Add country links-->
+
+                   </div>
+
                    <a class="brand" href="./index.php">See My City</a>
                    <div class="nav-collapse collapse pull-right">
                        <ul class="nav">

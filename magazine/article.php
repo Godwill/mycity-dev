@@ -14,6 +14,7 @@
   foreach($article as $article):
    
 ?>
+
 <!DOCTYPE html>
  <html lang="en">
     <head>
@@ -31,7 +32,8 @@
     <meta property="og:published_time" content="<?php echo date('Y-m-dTH:MZ', $article->created);?>"/>
     <meta property="og:author" content="<?php $author = User::find_by_sql("SELECT * FROM users WHERE id='{$article->uid}'LIMIT 1");
       foreach($author as $author): ?><?php echo $author->about?><?php endforeach; ?>"/>
-    <meta property="og:section" content="   <?php
+    <meta property="og:section" content="
+    <?php
         $category = Category::find_by_sql("SELECT * FROM categories WHERE id='{$article->category}'");
         foreach ($category as $category):
         echo $category->name;
@@ -47,30 +49,30 @@
     <link rel="stylesheet" type="text/css" href="<?php echo PATH ?>magazine/style.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo PATH ?>magazine/main.css"/>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-31936670-1']);
-  _gaq.push(['_setDomainName', 'seemycity.net']);
-  _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31936670-1']);
+      _gaq.push(['_setDomainName', 'seemycity.net']);
+      _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-</script>
+    </script>
     
-<script>
-  (function() {
-    var cx = '006218292630359392158:upouc3qimvi';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
+    <script>
+      (function() {
+        var cx = '006218292630359392158:upouc3qimvi';
+        var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+        gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
     
 </head>
 

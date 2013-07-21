@@ -1,0 +1,298 @@
+/* Customization of Bootstrap Styles
+-------------------------------------------------- */
+
+/* Body and structure
+-------------------------------------------------- */
+body{
+    background: url(./../img/body-bg.png);
+    margin: 15px;;
+}
+
+.container-fluid,
+.container{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Header*/
+
+/* TODO: Edit the nav-bar responsive styles */
+/* TODO: Client login button, make it different */
+
+.row-fluid .span1{
+    width: 80px;
+}
+.navbar-inverse .navbar-inner {
+    background: #ffffff;
+    height: 80px;
+    /*box-shadow: 0 0 6px #D4D4D4;*/
+    border-bottom: #E06B5C solid 4px;
+}
+
+.navbar-inverse .navbar-inner .container{
+    /*height: 80px;*/
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+
+.navbar .brand{
+    font-size: 30px;
+}
+
+.navbar-inverse .brand:hover,
+.navbar-inverse .brand:active,
+.navbar-inverse .brand:focus{
+    color: #000000;
+}
+
+.navbar-inverse .nav > li > a {
+
+    /* Text styles in the nav*/
+    font-size: 16px;
+    color: #000000;
+}
+
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:hover,
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:active,
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:focus,
+.navbar .nav > .active > a,
+.navbar .nav > .hover > a,
+.navbar .nav > .focus > a,
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus{
+    color: red;
+    background: none;
+}
+
+body > .navbar .brand:hover,
+body > .navbar .brand:focus{
+    color: red;
+    background: none;
+}
+
+
+.banner_container{
+
+}
+
+.banner_row{
+    margin-top: 70px;
+    margin-left: 0;
+    margin-right: 0;
+    background: #E67E22;
+    box-shadow: 0 1px 2px rgba(0,0,0,.25);
+    padding: 0;
+}
+
+.fancy_footer{
+    background: #E74C3C;
+    padding: 20px 0 40px;
+    min-height: 70px;
+}
+
+.fancy_footer a{
+    text-decoration: none;
+}
+
+.fancy_footer a i:hover,
+.fancy_footer a i:focus{
+    color: #000000;
+}
+
+.basic_footer{
+    background: #C0392B;
+    min-height: 30px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
+
+i{
+    /*font-size: 30px;*/
+    /*color: #f8f8ff;*/
+}
+
+.social_icons{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.fancy_footer .facebook a i:hover,
+.fancy_footer .facebook a i:focus{
+    color: #4169e1;
+}
+
+.fancy_footer .twitter a i:hover,
+.fancy_footer .twitter a i:focus{
+    color: #00bfff;
+}
+
+.fancy_footer .google a i:hover,
+.fancy_footer .google a i:focus{
+    color: #8b0000;
+}
+
+.fancy_footer .email a i:hover,
+.fancy_footer .email a i:focus{
+    color: #808080;
+}
+
+/*.fancy_footer .facebook a i{*/
+    /*margin-right: -330px;*/
+/*}*/
+
+/*.fancy_footer .twitter a i{*/
+
+/*}*/
+
+/*.fancy_footer .google i{*/
+    /*margin-left: -230px;*/
+/*}*/
+
+
+.fancy_footer .phone a i:hover,
+.fancy_footer .phone a i:focus{
+    color: #000000;
+}
+
+.fancy_footer .planner a i:hover,
+.fancy_footer .planner a i:focus{
+    color: #9acd32;
+}
+
+/*--Nice Pink Content Box--*/
+
+.content-box {
+    /*background-color: #E74C3B;*/
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    /*width: 60%;*/
+    /*margin-top: 190px;*/
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.85;
+    float: left;
+    text-transform: none;
+    /*margin-bottom: 70px;*/
+    /*width: 710px;*/
+    border: #d3d3d3 solid 1px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #d3d3d3;
+}
+
+.content-box a{
+    color: #000000;
+}
+
+.content-box h2{
+    color: #000000;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+.line{
+    border: #E06B5C 1px solid;
+}
+
+
+.view{
+    color: #808080;
+    padding-top: 10px;
+}
+
+/* Mix Grid Styles */
+#Grid .mix{
+    opacity: 0;
+    display: none;
+}
+
+.article_thumbnail{
+    background-image: url("./../img/test.jpg");
+    /*max-height: 70px;*/
+    /*max-width: 90px;*/
+}
+
+.btn-primary{
+    background: cornflowerblue;
+    border-radius: 1px;
+}
+
+.social{
+    /*float:right;*/
+    z-index: 9999;
+}
+
+.social {
+    /*padding: 20px;*/
+    margin:0;
+    right: 0px;
+    padding-top: 0px;
+    list-style-type: none;
+    /*top: 51px;*/
+}
+.social li {
+    float: left;
+    margin-left: 10px;
+}
+.social li:first-child {
+    margin-left: 0px;
+}
+.social li a {
+    width: 38px;
+    height: 38px;
+    text-indent: -9999px;
+    border: 1px solid transparent;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2);
+    background-color: #0d0d0d;
+    display: block;
+    -webkit-transition: background-color 250ms ease-in-out;
+    -moz-transition: background-color 250ms ease-in-out;
+    -o-transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
+}
+.social li a:active {
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.8), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    top: 1px;
+}
+.facebook-soc {
+    background: url('./../img/facebook.png') no-repeat 50% 50% #0d0d0d;
+}
+.facebook-soc:hover {
+    background-color: #37589f;
+}
+.twitter-soc {
+    background: url('./../img/twitter.png') no-repeat 50% 50% #0d0d0d;
+}
+.twitter-soc:hover {
+    background-color: #1bd7ed;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6);
+}
+.googleplus-soc {
+    background: url('./../img/google.png') no-repeat 50% 50% #0d0d0d;
+}
+.googleplus-soc:hover {
+    background-color: #b70000;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6);
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}

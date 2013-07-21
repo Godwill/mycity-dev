@@ -8,6 +8,7 @@
 bin/
 tmp/
 *.tmp
+*.htaccess
 *.bak
 *.swp
 *~.nib
