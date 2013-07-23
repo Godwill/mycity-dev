@@ -169,7 +169,7 @@ i{
     color: #9acd32;
 }
 
-/*--Nice Pink Content Box--*/
+/*--Nice Content Box--*/
 
 .content-box {
     /*background-color: #E74C3B;*/
@@ -295,4 +295,24 @@ i{
 
 .clearfix:after {
     clear: both;
+}
+
+/*#Grid .row-fluid .artice_row{*/
+    /*margin-left: -20px;*/
+    /*background: #000000;*/
+/*}*/
+
+#Grid .row-fluid .span3{
+    width: 250px;
+    margin-left: -20px;margin-right: 45px;
+    border: #d3d3d3 solid 1px;
+    height: 380px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #d3d3d3;
+}
+
+.share-hr{
+    /*margin-bottom: -1px;*/
+    /*margin-top: -2px;*/
 }

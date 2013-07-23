@@ -173,13 +173,18 @@ function get_for_stream($object_id, $table){
 	$result = $database->fetch_array($result_set);
 
 if($table == 'articles'){
-	  echo '<div class="featured">';
+	  echo '<li class="span3 article_span">';
 	  if(!empty($result['picture'])){
-		echo '<div class="featuredPic"><img src="images/magazine/thumb/'.$result['picture'].'" width="70px" height="70px"></div>';
+		echo '<div class="thumbnail">
+		    <img src="images/magazine/thumb/'.$result['picture'].'" height=""></div>';
 	}
-	echo '<h3><a href="magazine/'.date('Y', $result['created']).'/'.date('m', $result['created']).'/'.date('d', $result['created']).'/'.$result['system'].'">' .$result['title']. '</a></h3>';
-		  	echo '<p>'.substr($result['body'],0, 190).'....</p>';
-	echo '</div>';
+	echo '<h4><a href="magazine/'.date('Y', $result['created']).'/'.date('m', $result['created']).'/'.date('d', $result['created']).'/'.$result['system'].'">' .$result['title']. '</a></h4>';
+    echo '<small>'.substr($result['body'],0, 190).'....</small>';
+    echo '<hr class="share-hr"/>';
+    echo '  <button class="btn"><i class="icon icon-facebook"></i> Share </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn"><i class="icon icon-twitter"></i> Share </button>';
+
+    echo '</li>';
 
   }elseif($table == 'companies'){
   echo '<div class="featuredSmall">';
