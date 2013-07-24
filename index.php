@@ -33,13 +33,25 @@
 					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=1 ORDER BY created DESC LIMIT 3");
 					foreach ($article as $article):
 				?>
-                            <li class="span3" style="width: 300px;">
-                            <div style="padding:3px;border-bottom:2px solid orange"><?php echo get_category('categories', $article->category); ?> <div class="pull-right"><?php echo date('d F Y', $article->created); ?></div></div>
-                                <div class="thumbnail"><img src="./assets/img/test.jpg" style="width:100%;height:150px;">
-                                    <h4><?php echo $article->title; ?></h4>
-                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                                </div>
+                       <li class="span3" style="width: 300px;">
+                            <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;margin-bottom:5px;">
+	                            <div  class=" pull-left small" style="width: 200px;float:left">
+		                            <?php echo get_category('categories', $article->category); ?>
+		                        </div>    
+		                        <div class="pull-right small" style="float:right;">
+		                            <?php echo date('d F Y', $article->created); ?>
+		                        </div>
+                            </div> 
+                                <div class=""><img src="./assets/img/test.jpg" style="width:100%;height:130px;"></div>
+                                    <h3><?php echo $article->title; ?></h3>
+                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it.</small>
+                                    <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;border-top:2px solid orange;">
+	                                    <span class="small" >by Author Name Here</span>
+	                                    <div class="pull-right">
+	                                    <span class="small" >Read More</span>
+	                                    </div>
+                                    </div>
+                               
                             </li>
 						<?php endforeach;?>
                     </ul>
@@ -57,12 +69,13 @@
 					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=8 ORDER BY created DESC LIMIT 3");
 					foreach ($article as $article):
 				?>
-                            <li class="span3" style="width: 300px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4><?php echo $article->title; ?></h4>
+                             <li class="span3" style="width: 300px;">
+                            <div style="padding:3px;border-bottom:2px solid orange"><?php echo get_category('categories', $article->category); ?> <div class="pull-right"><?php echo date('d F Y', $article->created); ?></div></div>
+                                <div class="thumbnail"><img src="./assets/img/test.jpg" style="width:100%;height:150px;">
+                                    <h3><?php echo $article->title; ?></h3>
                                     <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
+                                    <div style="padding:3px;border-bottom:2px solid orange">by Author Name Here  <div class="pull-right">Read More</div></div>
+                                   
                                 </div>
                             </li>
 						<?php endforeach;?>
@@ -81,13 +94,14 @@
 					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=5 ORDER BY created DESC LIMIT 3");
 					foreach ($article as $article):
 				?>
-                            <li class="span4" style="width: 300px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;"> </div>
-                                    <h4><?php echo $article->title; ?></h4>
+                            <li class="span3" style="width: 300px;">
+                            <div style="padding:3px;"><?php echo get_category('categories', $article->category); ?> <div class="pull-right"><?php echo date('d F Y', $article->created); ?></div></div>
+                                <div class="thumbnail"><img src="./assets/img/test.jpg" style="width:100%;height:150px;">
+                                    <h3><?php echo $article->title; ?></h3>
                                     <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                               
+                                    <div style="padding:3px;">by Author Name Here  <div class="pull-right">Read More</div></div>
+                                   
+                                </div>
                             </li>
 						<?php endforeach;?>
                         </ul>
