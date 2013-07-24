@@ -23,99 +23,103 @@
 
             <hr>
 
-            <ul  id="Grid">
+<ul  id="Grid">
 
-                <div class="row-fluid">
-
-                    <div class="article_container span">
+         <div class="row-fluid">
+                <div class="article_container span">
+                    <h1>Fashion</h1>
                         <ul class="thumbnails">
-                            <li class="span3" style="width: 260px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
-                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                                </div>
+                           <?php 
+					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=1 ORDER BY created DESC LIMIT 3");
+					foreach ($article as $article):
+				?>
+                       <li class="span3" style="width: 300px;">
+                            <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;margin-bottom:5px;">
+	                            <div  class=" pull-left small" style="width: 200px;float:left">
+		                            <?php echo get_category('categories', $article->category); ?>
+		                        </div>    
+		                        <div class="pull-right small" style="float:right;">
+		                            <?php echo date('d F Y', $article->created); ?>
+		                        </div>
+                            </div> 
+                                <div class=""><img src="./assets/img/test.jpg" style="width:100%;height:130px;"></div>
+                                    <h3><?php echo $article->title; ?></h3>
+                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it.</small>
+                                    <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;border-top:2px solid orange;">
+	                                    <span class="small" >by Author Name Here</span>
+	                                    <div class="pull-right">
+	                                    <span class="small" >Read More</span>
+	                                    </div>
+                                    </div>
+                               
                             </li>
-
-                            <li class="span3" style="width: 260px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
-                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                                </div>
-                            </li>
-
-                        <li class="span3" style="width: 260px;">
-                            <div class="thumbnail">
-                                <img src="./assets/img/test.jpg" style="height: 120px;">
-                                <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
-                                <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                            </div>
-                        </li>
+						<?php endforeach;?>
                     </ul>
                 </div>
-                </div>
-
-                <div class="row-fluid">
-
+                         <hr>
+         <small>Page 1 of 6</small>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon-chevron-left"></i> &nbsp; <i class="icon-chevron-right"></i>
+         </div>
+         <div class="row-fluid">
                     <div class="article_container span">
                         <ul class="thumbnails">
-                            <li class="span3" style="width: 260px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
+                            <h1>Technology</h1>
+                <?php 
+					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=8 ORDER BY created DESC LIMIT 3");
+					foreach ($article as $article):
+				?>
+                             <li class="span3" style="width: 300px;">
+                            <div style="padding:3px;border-bottom:2px solid orange"><?php echo get_category('categories', $article->category); ?> <div class="pull-right"><?php echo date('d F Y', $article->created); ?></div></div>
+                                <div class="thumbnail"><img src="./assets/img/test.jpg" style="width:100%;height:150px;">
+                                    <h3><?php echo $article->title; ?></h3>
                                     <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
+                                    <div style="padding:3px;border-bottom:2px solid orange">by Author Name Here  <div class="pull-right">Read More</div></div>
+                                   
                                 </div>
                             </li>
-
-                            <li class="span3" style="width: 260px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
-                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                                </div>
-                            </li>
-
-                            <li class="span3" style="width: 260px;">
-                                <div class="thumbnail">
-                                    <img src="./assets/img/test.jpg" style="height: 120px;">
-                                    <h4>iOS 7: Apple’s new design is no longer about making it work, and that’s too bad</h4>
-                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
-                                    <button class="btn btn-primary" style="margin-left:70px;">Read More</button>
-                                </div>
-                            </li>
+						<?php endforeach;?>
                         </ul>
-                    </div>
-                </div>
+                    </div><?php #end of article container ?>
+                             <hr>
+         <small>Page 1 of 6</small>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon-chevron-left"></i> &nbsp; <i class="icon-chevron-right"></i>
+         </div><?php #end of technology row ?>
+         <div class="row-fluid">
+                    <div class="article_container span">
+                        <ul class="thumbnails">
+                            <h1>Business</h1>
+                <?php 
+					$article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=5 ORDER BY created DESC LIMIT 3");
+					foreach ($article as $article):
+				?>
+                            <li class="span3" style="width: 300px;">
+                            <div style="padding:3px;"><?php echo get_category('categories', $article->category); ?> <div class="pull-right"><?php echo date('d F Y', $article->created); ?></div></div>
+                                <div class="thumbnail"><img src="./assets/img/test.jpg" style="width:100%;height:150px;">
+                                    <h3><?php echo $article->title; ?></h3>
+                                    <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it. It has to be said; iOS 7 is just not an improvement over iOS 6.</small>
+                                    <div style="padding:3px;">by Author Name Here  <div class="pull-right">Read More</div></div>
+                                   
+                                </div>
+                            </li>
+						<?php endforeach;?>
+                        </ul>
+                    </div><?php #end of article container ?>
+        </div><?php #end of ---- row?>
+         <hr>
+         <small>Page 1 of 6</small>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon-chevron-left"></i> &nbsp; <i class="icon-chevron-right"></i>
+</ul>
 
-                <hr>
-
-                <small>Page 1 of 6</small>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i class="icon-chevron-left"></i> &nbsp; <i class="icon-chevron-right"></i>
-<!--                --><?php
-//                $stream = Stream::find_by_sql("SELECT * FROM stream ORDER BY created DESC");
-//                foreach($stream as $stream):
-//
-//                    echo get_for_stream($stream->object_id, $stream->table);
-//
-//                endforeach;
-//                ?>
-
-            </ul>
-
-        </div>
+</div><?php #end of main content?>
 
         <div class="span3"><!--Sidebar-->
             <?php include'template/sidebar-left.php';?>
         </div>
     </div>
-</div>
+</div><?php #end of container fluid ?>
 
 <div class="clear"></div>
 <footer>
