@@ -10,22 +10,33 @@ var uri = 'http://imp.tradedoubler.com/imp?type(js)pool(478129)a(2113950)' + new
 document.write('<sc'+'ript type="text/javascript" src="'+uri+'" charset="ISO-8859-1"></sc'+'ript>');
 </script>
     </div><!-- End of Ad2 -->
-	
-        
-    <div id="siteSocial">
-          <h2>Connect With Us</h2>
-          <div class="share-icon"><a href="https://www.facebook.com/pages/See-My-City/237937022885363" target="_blank"><img src="<?php echo PATH ?>images/site/social/facebook.jpg" width="32" height="32" /></a></div>
-           <div class="share-icon"><a href="http://www.twitter.com/citysee" target="_blank"><img src="<?php echo PATH ?>images/site/social/twitter.jpg" width="32" height="32" /></a></div>
-           <div class="share-icon"><a href="http://www.plus.google.com" target="_blank"><img src="<?php echo PATH ?>images/site/social/google.jpg" width="32" height="32" /></a></div>
-           <div class="share-icon"><a href="http://www.pinterest.com" target="_blank"><img src="<?php echo PATH ?>images/site/social/pinterest.jpg" width="32" height="32" /></a></div>
-           <div class="share-icon"><a href="http://www.youtube.com/user/" target="_blank"><img src="<?php echo PATH ?>images/site/social/youtube.jpg" width="32" height="32" /></a></div>
-           <div class="share-icon"><a href="http://www..com" target="_blank"><img src="<?php echo PATH ?>images/site/social/rss.jpg" width="32" height="32" /></a></div>
-           <h2>Subscribe to our newsletter</h2>
-    </div>
 
-   <!-- <div class="ad2">
-        <h2>Archives</h2>
-    </div><!-- End of Archives -->
+
+<div class="follow">
+    <h4>Follow Us On Social Media</h4>
+
+    <ul class=social clearfix">
+    <li><a href="#" class="facebook-soc">Facebook</a></li>
+    <li><a href="#" class="twitter-soc">Twitter</a></li>
+    <li><a href="#" class="googleplus-soc">Google+</a></li>
+    </ul>
+</div>
+
+<div class="" style="clear: both;"></div> <!--Empty div to to correct clearfix hack-->
+<hr class="line"/>
+<div class="search">
+    <h4>Search</h4>
+
+    <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">Search</button>
+    </form>
+</div>
+
+
+<!-- <div class="ad2">
+     <h2>Archives</h2>
+ </div><!-- End of Archives -->
 
     <div id="mostRead">
         <h3>Popular Posts</h3>
@@ -81,13 +92,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </div>
     <div class="ad2"><a href="http://www.tripleclicks.com/12481571">
 <img src="http://www.sfimg.com/Images/Banners/banner429.jpg" border="0"/ ></a>
-         <h2>Topics</h2>
+         <h4>Article Tags</h4>
+        <ul class="nav nav-pills">
          <?php 
 	$sql = "SELECT * FROM sub_categories";
 	$topics = Category::find_by_sql($sql);
 	foreach($topics as $topic):
 ?>
-	<span style="font-size:<?php echo rand(11, 28);?>px"><a href="<?php echo PATH ?>magazine/browse/?q=<?php echo $topic->id;?>"><?php echo $topic->name;?></a></span>
+        <li class="active"><a href="<?php echo PATH ?>magazine/browse/?q=<?php echo $topic->id;?>"><?php echo $topic->name;?></a></li>
+
+        <!--	<span style="font-size:--><?php //echo rand(11, 28);?><!--px"><a href="--><?php //echo PATH ?><!--magazine/browse/?q=--><?php //echo $topic->id;?><!--">--><?php //echo $topic->name;?><!--</a></span>-->
 <?php endforeach;?>
+
+
+        </ul>
     </div>
 
