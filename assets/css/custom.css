@@ -176,6 +176,7 @@ i{
     background-color: #ffffff;
     color: #000000;
     padding: 20px;
+    padding-bottom: 60px;
     /*width: 60%;*/
     /*margin-top: 190px;*/
     margin-left: auto;
@@ -188,6 +189,7 @@ i{
     border: #d3d3d3 solid 1px;
     border-radius: 2px;
     box-shadow: 1px 1px 1px #d3d3d3;
+    margin-bottom: 60px;
 }
 
 .content-box a{
@@ -316,4 +318,13 @@ i{
 .share-hr{
     /*margin-bottom: -1px;*/
     /*margin-top: -2px;*/
+}
+
+.content-box a{
+    color: dodgerblue;
+}
+
+.content-box img{
+    margin-bottom: 20px;
+
 }

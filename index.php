@@ -28,7 +28,7 @@
     <div class="row-fluid">
 
             <div class="article_container span">
-                <h1>Fashion</h1>
+                <h3>Fashion</h3>
                     <ul class="thumbnails">
                        <?php
                 $article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=1 ORDER BY created DESC LIMIT 3");
@@ -44,7 +44,7 @@
 <!--		                        </div>-->
 <!--                            </div> -->
                             <div class=""><img src="./assets/img/test.jpg" ></div>
-                                <h3><?php echo $article->title; ?></h3>
+                                <h4><?php echo $article->title; ?></h4>
                                 <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it.</small>
 <!--                                    <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;border-top:2px solid orange;">-->
 <!--	                                    <span class="small" >by Author Name Here</span>-->
@@ -68,7 +68,7 @@
     <div class="row-fluid">
 
         <div class="article_container span">
-            <h1>Business</h1>
+            <h3>Business</h3>
             <ul class="thumbnails">
                 <?php
                 $article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=5 ORDER BY created DESC LIMIT 3");
@@ -84,7 +84,7 @@
                         <!--		                        </div>-->
                         <!--                            </div> -->
                         <div class=""><img src="./assets/img/test.jpg" ></div>
-                        <h3><?php echo $article->title; ?></h3>
+                        <h4><?php echo $article->title; ?></h4>
                         <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it.</small>
                         <!--                                    <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;border-top:2px solid orange;">-->
                         <!--	                                    <span class="small" >by Author Name Here</span>-->
@@ -108,7 +108,7 @@
     <div class="row-fluid">
 
         <div class="article_container span">
-            <h1>Technology</h1>
+            <h3>Technology</h3>
             <ul class="thumbnails">
                 <?php
                 $article = Article::find_by_sql("SELECT * FROM articles WHERE type !=2 AND category=8 ORDER BY created DESC LIMIT 3");
@@ -124,7 +124,7 @@
                         <!--		                        </div>-->
                         <!--                            </div> -->
                         <div class=""><img src="./assets/img/test.jpg" ></div>
-                        <h3><?php echo $article->title; ?></h3>
+                        <h4><?php echo $article->title; ?></h4>
                         <small>I have been trying to like iOS 7. Really. I watched the videos, played with it on several iPhones, and last night I even installed it on my iPad (which was released yesterday). But I just can’t do it.</small>
                         <!--                                    <div style="width: 98%;float:left;padding:3px;border-bottom:2px solid orange;border-top:2px solid orange;">-->
                         <!--	                                    <span class="small" >by Author Name Here</span>-->
