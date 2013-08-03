@@ -2,28 +2,21 @@
 
 require_once(LIB_PATH.DS.'database.php');
 
-class Task{
+class Letter{
 	
-	protected static $table_name = "tasks";
-	protected static $db_fields = array('id', 'title', 'created', 'body', 'category_id', 
-			'updated', 'status', 'reminder', 'event_id', 'event_type', 'due_date');
+	protected static $table_name = "cover_letter";
+	protected static $db_fields = array('id', 'user_id', 'letter', 'created');
 
 
 	 public $id;
-	 public $title;
-	 public $created;
-     public $body;
-     public $event_type;
-     public $event_id;
-     public $updated;
-     public $status;
-     public $category_id;
-     public $due_date;
-     public $reminder;
+	 public $user_id;
+	 public $letter;
+     public $created;
+
 
      // Common Database Methods
 	public static function find_all() {
-		return self::find_by_sql("SELECT * FROM ".self::$table_name." ORDER BY name");
+		return self::find_by_sql("SELECT * FROM ".self::$table_name);
   	}
   
   	public static function find_by_id($id=0) {
@@ -116,7 +109,7 @@ class Task{
 	  }
 	}
 
-	public function update($id) {
+	public function update() {
 	  global $database;
 		$attributes = $this->sanitized_attributes();
 		$attribute_pairs = array();
@@ -125,7 +118,7 @@ class Task{
 		}
 		$sql = "UPDATE ".self::$table_name." SET ";
 		$sql .= join(", ", $attribute_pairs);
-		$sql .= " WHERE id=". $database->escape_value($id);
+		$sql .= " WHERE id=". $database->escape_value($this->id);
 	  $database->query($sql);
 	  return ($database->affected_rows() == 1) ? true : false;
 	}

@@ -8,10 +8,10 @@
     $system = $url[2]; 
     #print_r($url);   
     $country = get_country($url[1]);
-    $category = WP_Category::find_by_sql("SELECT * FROM wedding_categories WHERE system='{$system}'");
-    foreach($category as $category):
+    $location = Location::find_by_sql("SELECT * FROM business_centers WHERE system='{$system}'");
+    foreach($location as $location):
     #print_r($category);
-    $company = Company::find_by_sql("SELECT * FROM companies WHERE category='$category->id'");
+    $company = Company::find_by_sql("SELECT * FROM companies WHERE location='$location->id' AND type=4");
     foreach($company as $company): ?>
   
    <div class="featured" style="width: 250px;margin: 2px;">

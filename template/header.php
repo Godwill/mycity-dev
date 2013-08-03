@@ -53,7 +53,6 @@
     
     <link href="<?php echo PATH ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo PATH ?>assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
-<!--    <link href="--><?php //echo PATH ?><!--assets/css/wedding.css" rel="stylesheet" type="text/css"/>-->
     <link href="<?php echo PATH ?>assets/css/main.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo PATH ?>assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Varela+Round|Montserrat:400,700' rel='stylesheet' type='text/css'>

@@ -2,28 +2,41 @@
 
 require_once(LIB_PATH.DS.'database.php');
 
-class Task{
-	
-	protected static $table_name = "tasks";
-	protected static $db_fields = array('id', 'title', 'created', 'body', 'category_id', 
-			'updated', 'status', 'reminder', 'event_id', 'event_type', 'due_date');
+class Event {
+
+	protected static $table_name = "events";
+	protected static $db_fields = array('id', 'name', 'description', 'start_date', 
+         'end_date', 'start_time', 'end_time', 'created', 'venue', 
+         'uid', 'contact_person', 'tel', 'mobile', 'fax', 'email', 'website', 'company_id', 
+         'system', 'type', 'charge', 'country', 'filename'); 
 
 
-	 public $id;
-	 public $title;
-	 public $created;
-     public $body;
-     public $event_type;
-     public $event_id;
-     public $updated;
-     public $status;
-     public $category_id;
-     public $due_date;
-     public $reminder;
+	public $id;
+	public $name;
+	public $description;
+	public $start_date;
+	public $end_date;
+	public $start_time;
+	public $end_time;
+	public $created;
+	public $venue;
+	public $uid;
+	public $contact_person;
+	public $tel;
+	public $mobile;
+	public $fax;
+	public $email;
+	public $website;
+     public $company_id;
+     public $system;
+     public $type;
+     public $charge;
+     public $country;
+     public $filename;
 
      // Common Database Methods
 	public static function find_all() {
-		return self::find_by_sql("SELECT * FROM ".self::$table_name." ORDER BY name");
+		return self::find_by_sql("SELECT * FROM ".self::$table_name);
   	}
   
   	public static function find_by_id($id=0) {
@@ -116,7 +129,7 @@ class Task{
 	  }
 	}
 
-	public function update($id) {
+	public function update() {
 	  global $database;
 		$attributes = $this->sanitized_attributes();
 		$attribute_pairs = array();
@@ -125,7 +138,7 @@ class Task{
 		}
 		$sql = "UPDATE ".self::$table_name." SET ";
 		$sql .= join(", ", $attribute_pairs);
-		$sql .= " WHERE id=". $database->escape_value($id);
+		$sql .= " WHERE id=". $database->escape_value($this->id);
 	  $database->query($sql);
 	  return ($database->affected_rows() == 1) ? true : false;
 	}

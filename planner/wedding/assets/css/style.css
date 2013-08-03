@@ -1,0 +1,137 @@
+a{
+	color:#ff3990;
+}
+
+body{
+	font-family: "Ubuntu";
+	letter-spacing: .2;
+	color: #3d3d3d;
+	background-image:url("../img/bg.png");
+}
+
+.page{
+	width:1200px;
+	margin:0px auto;
+	background-color:white;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+header{
+	width:100%;
+	height:auto;
+	float:left;
+	margin-bottom:5px;
+	border-bottom:3px solid purple;
+}
+
+header .site-logo{
+	width:100px;
+	height:90px;
+	float:left;
+	margin:5px;
+}
+
+header .site-logo img{
+	width:100%;
+}
+
+.ad1{
+	width:728px;
+	height:90px;
+	float:right;
+}
+
+header nav{
+	width:95%;
+	float:left;
+	padding:5px;
+}
+
+
+header nav ul{
+	list-style:none;
+	padding:0px;
+}
+
+header nav ul li{
+	float:left;
+	padding:5px;
+}
+
+.front-main-content{
+	width:900px;
+	float:left;
+}
+
+.main-content{
+	width:800px;
+	float:left;
+	margin-left:10px;
+}
+
+.summary{
+	width:220px;
+	height:auto;
+	float:left;
+	margin:2px;
+	padding:2px;
+	padding-bottom:50px;
+}
+
+.up-ap-container{
+	width:98%;
+	height:auto;
+	float:left;
+	margin-bottom:2px;
+	padding-top:2px;
+	padding-bottom:2px;
+	border-bottom:1px dashed purple;
+}
+
+.up-ap{
+	width:98%;
+	float:left;
+	text-align:left;
+}
+
+.up-ap-date{
+	width:98%;
+	float:right;
+	text-align:right;
+	font-size:10px;
+	color:gray;
+}
+
+.clear{
+	clear:both;
+}
+
+.task-container{
+	width:650px;
+	float:right;
+	height:auto;
+	padding:10px;
+	border-bottom:2px solid purple;
+}
+
+.small-logo{
+	width:50px;
+	height:50px;
+	float:left;
+	margin-top:10px;
+	margin-right:2px;
+}
+
+.footer{
+	width:100%;
+	float:left;
+	margin-top:10px;
+	border-top:2px solid #000;
+}

@@ -22,9 +22,13 @@
 <script type="text/javascript" language="javascript" src="../scripts/slider.js"></script>
 <title>See My City</title>
 
-<link rel="stylesheet" type="text/css" href="<?php echo PATH ?>assets/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo PATH ?>magazine/style.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo PATH ?>magazine/main.css"/>
+<link href="<?php echo PATH ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo PATH ?>assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo PATH ?>assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo PATH ?>assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Varela+Round|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
 
 <!--  Attach the plug-in to the slider parent element and adjust the settings as required -->
     <script>

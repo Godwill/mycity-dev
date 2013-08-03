@@ -2,28 +2,31 @@
 
 require_once(LIB_PATH.DS.'database.php');
 
-class Task{
+class Position{
 	
-	protected static $table_name = "tasks";
-	protected static $db_fields = array('id', 'title', 'created', 'body', 'category_id', 
-			'updated', 'status', 'reminder', 'event_id', 'event_type', 'due_date');
+	protected static $table_name = "positions";
+	protected static $db_fields = array('id', 'company_id', 'portfolio_id', 'user_id', 'num_of_share', 'price',
+         'created', 'status', 'sold', 'sold_price', 'transaction_cost', 'sold_number', 'sold_date', 'buy_order_id');
 
 
 	 public $id;
-	 public $title;
-	 public $created;
-     public $body;
-     public $event_type;
-     public $event_id;
-     public $updated;
-     public $status;
-     public $category_id;
-     public $due_date;
-     public $reminder;
+	 public $company_id;
+	 public $user_id;
+     public $num_of_share;
+     public $price;
+     public $created;
+     public $status; //checks if stock is currently in portfolio 0; sold 1; or watchlist 2;
+     public $sold; //date when stock was sold
+     public $sold_price;
+     public $portfolio_id;
+     public $transaction_cost;
+     public $sold_number;
+     public $sold_date;
+     public $buy_order_id;
 
      // Common Database Methods
 	public static function find_all() {
-		return self::find_by_sql("SELECT * FROM ".self::$table_name." ORDER BY name");
+		return self::find_by_sql("SELECT * FROM ".self::$table_name);
   	}
   
   	public static function find_by_id($id=0) {
@@ -116,7 +119,7 @@ class Task{
 	  }
 	}
 
-	public function update($id) {
+	public function update() {
 	  global $database;
 		$attributes = $this->sanitized_attributes();
 		$attribute_pairs = array();
@@ -125,7 +128,7 @@ class Task{
 		}
 		$sql = "UPDATE ".self::$table_name." SET ";
 		$sql .= join(", ", $attribute_pairs);
-		$sql .= " WHERE id=". $database->escape_value($id);
+		$sql .= " WHERE id=". $database->escape_value($this->id);
 	  $database->query($sql);
 	  return ($database->affected_rows() == 1) ? true : false;
 	}

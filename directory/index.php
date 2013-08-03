@@ -1,5 +1,5 @@
 <?php include '../system/initialize.php'; ?>
-<?php include '../template/simple-header.php'; ?>
+<?php include '../template/header.php'; ?>
 <div class="main-content-long">
  
   <div class="section categories"><h3>Featured Companies</h3>
